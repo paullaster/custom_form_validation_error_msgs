@@ -3,7 +3,9 @@ const email = document.getElementById('mail');
 const emailError = document.querySelector('#mail + span.error');
 
 const showError = () => {
-    
+    if(emailError.validity.valueMissing){
+        
+    }
 }
 
 email.addEventListener('input', (event) => {

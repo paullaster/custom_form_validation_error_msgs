@@ -14,4 +14,8 @@ email.addEventListener('input', (event) => {
     showError();
     //email.setCustomValidity("");
 
+});
+
+form.addEventListener('submit', (event) => {
+    
 })

@@ -22,9 +22,9 @@ form.addEventListener('submit', (event) => {
         if(child.children){
             const decendantsArray = Array.from(child.children)
             console.log(decendantsArray)
-            const decendantInput = decendantsArray.find(
-                ()
-            )
+            // const decendantInput = decendantsArray.find(
+            //     (child) => child.)
+            // )
         }
         return;
     })

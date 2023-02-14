@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 const email = document.getElementById('mail');
+const emailError = document.querySelector('#mail + span.error');
 
 email.addEventListener('input', (event) => {
     if(email.validity.typeMismatch){

@@ -19,7 +19,7 @@ email.addEventListener('input', (event) => {
 form.addEventListener('submit', (event) => {
     if(!email.validity.valid){
         showError();
-        addEventListener('invalid', (event) => {
+        form.addEventListener('invalid', (event) => {
             console.log (event);
         })
         event.preventDefault();

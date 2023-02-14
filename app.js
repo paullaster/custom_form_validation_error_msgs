@@ -11,6 +11,9 @@ const showError = () => {
         emailError.innerHTML = "Please enter a valid email!";
         return;
     }
+    if(email.validity.tooShort){
+        
+    }
 }
 
 email.addEventListener('input', (event) => {

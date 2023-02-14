@@ -7,7 +7,8 @@ email.addEventListener('input', (event) => {
         console.log(email.validity)
         emailError.textContent ='';
         emailError.className='error';
-       //return email.setCustomValidity("Expect an email!");
+       //email.setCustomValidity("Expect an email!");
+       return;
     }
     console.log(email.validity)
     email.setCustomValidity("");

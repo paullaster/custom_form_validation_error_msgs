@@ -12,7 +12,9 @@ const showError = () => {
         return;
     }
     if(email.validity.tooShort){
-        emailError.innerHTML = "Email too short!";
+        emailError.innerHTML = `
+        Email too short!
+        `;
         return;
     }
 }

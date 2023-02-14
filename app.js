@@ -23,7 +23,9 @@ childrenArray.forEach(child => {
     const decendantInput = decendantsArray.find(child => {
       return child.nodeName === "INPUT";
     });
-    console.log(decendantInput);
+    decendantInput.addEventListener('invalid', (event) => {
+        console.log(decendantInput);
+    })
   }
   return;
 });

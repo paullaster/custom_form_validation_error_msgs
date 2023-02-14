@@ -4,7 +4,11 @@ const emailError = document.querySelector('#mail + span.error');
 
 const showError = () => {
     if(emailError.validity.valueMissing){
-        emailError.innerHTML = "Email is missing!"
+        emailError.innerHTML = "Email is missing!";
+        return;
+    }
+    if (email.validity.typeMismatch){
+        emailError.innerHTML = "Please enter a valid email!";
         return;
     }
 }

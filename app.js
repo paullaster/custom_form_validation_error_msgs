@@ -18,10 +18,23 @@ email.addEventListener("input", event => {
 form.addEventListener("submit", event => {
   //console.log(childrenArray)
   if (!email.validity.valid) {
+    const childrenArray = Array.from(form.childNodes);
+    childrenArray.forEach(child => {
+      if (child.children) {
+        const decendantsArray = Array.from(child.children);
+
+        const decendantInput = decendantsArray.find(child => {
+          return child.nodeName === "INPUT";
+        });
+        decendantInput.addEventListener("invalid", event => {
+          console.log(event);
+        });
+      }
+      return;
+    });
     showError();
     event.preventDefault();
   }
-  
 });
 
 const showError = () => {

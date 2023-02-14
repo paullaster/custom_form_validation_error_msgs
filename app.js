@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
             
             const decendantInput = decendantsArray.find(
                 (child) => {
-                    return child.includes("input")
+                    return child === "input";
                 }
             )
             console.log(decendantInput)

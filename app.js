@@ -19,9 +19,11 @@ email.addEventListener('input', (event) => {
 form.addEventListener('submit', (event) => {
     const childrenArray = Array.from(form.childNodes)
     childrenArray.forEach((child) => {
-        if(!child.children){
-            console.log(child)
+        if(child.children){
+            const decendantsArray = Array.from(child.children)
+            c
         }
+        return;
     })
     //console.log(childrenArray)
     if(!email.validity.valid){

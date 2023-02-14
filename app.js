@@ -22,3 +22,21 @@ form.addEventListener('submit', (event) => {
         event.preventDefault();
     }
 })
+
+const showError = () => {
+    if(emailError.validity.valueMissing){
+        emailError.innerHTML = "Email is missing!";
+
+    }else if (email.validity.typeMismatch){
+        emailError.innerHTML = "Please enter a valid email!";
+
+    }else if(email.validity.tooShort){
+        emailError.innerHTML = `
+        Email too short!
+        You've entered a ${email.value.length} 
+        ${email.value.length > 1 ? "characters": "character"} long.
+        Minimum length required: ${email.minLength} characters
+        `;
+    }
+    emailError.className = "error active";
+}

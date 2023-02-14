@@ -34,7 +34,7 @@ const showError = () => {
         emailError.innerHTML = `
         Email too short!
         You've entered a ${email.value.length} 
-        ${email.value.length > 1 ? "characters": "character"} long.
+        ${email.value.length > 1 ? "characters": "character"} long email.
         Minimum length required: ${email.minLength} characters
         `;
     }

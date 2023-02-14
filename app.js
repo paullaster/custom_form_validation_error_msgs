@@ -23,6 +23,10 @@ form.addEventListener('submit', (event) => {
     }
 })
 
+form.addEventListener('invalid', (event) => {
+    
+});
+
 const showError = () => {
     if(email.validity.valueMissing){
         emailError.innerHTML = "Email is missing!";

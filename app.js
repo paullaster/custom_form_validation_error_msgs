@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
             
             const decendantInput = decendantsArray.find(
                 (child) => {
-                    return child === "input";
+                    return child.nodeName === 'INPUT'
                 }
             )
             console.log(decendantInput)

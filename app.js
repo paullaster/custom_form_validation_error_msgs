@@ -20,7 +20,7 @@ const showError = () => {
         `;
         return;
     }
-}
+    emailError.className = "error active";
 
 email.addEventListener('input', (event) => {
     if(email.validity.valid){

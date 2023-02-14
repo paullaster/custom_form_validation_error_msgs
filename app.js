@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
 })
 
 const showError = () => {
-    if(emailError.validity.valueMissing){
+    if(email.validity.valueMissing){
         emailError.innerHTML = "Email is missing!";
 
     }else if (email.validity.typeMismatch){

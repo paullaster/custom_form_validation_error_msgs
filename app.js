@@ -17,7 +17,7 @@ email.addEventListener('input', (event) => {
 });
 
 form.addEventListener('submit', (event) => {
-    console.log(form.children)
+    console.log(form.p.children)
     if(!email.validity.valid){
         showError();
         event.preventDefault();

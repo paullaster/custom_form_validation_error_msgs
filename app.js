@@ -15,7 +15,14 @@ email.addEventListener("input", event => {
   //email.setCustomValidity("");
 });
 
-const childrenArray = Array.from(form.childNodes);
+form.addEventListener("submit", event => {
+  //console.log(childrenArray)
+  if (!email.validity.valid) {
+    showError();
+    event.preventDefault();
+  }
+
+  const childrenArray = Array.from(form.childNodes);
 childrenArray.forEach(child => {
   if (child.children) {
     const decendantsArray = Array.from(child.children);
@@ -29,13 +36,6 @@ childrenArray.forEach(child => {
   }
   return;
 });
-
-form.addEventListener("submit", event => {
-  //console.log(childrenArray)
-  if (!email.validity.valid) {
-    showError();
-    event.preventDefault();
-  }
 });
 
 const showError = () => {

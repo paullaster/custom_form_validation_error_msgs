@@ -14,6 +14,9 @@ const showError = () => {
     if(email.validity.tooShort){
         emailError.innerHTML = `
         Email too short!
+        You've entered a ${email.value.length} 
+        ${email.value.length > 1 ? "characters": "character"} long.
+        Minimum length required: ${email.minLength} characters
         `;
         return;
     }

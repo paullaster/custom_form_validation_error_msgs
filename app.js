@@ -16,6 +16,21 @@ email.addEventListener('input', (event) => {
 
 });
 
+const childrenArray = Array.from(form.childNodes)
+    childrenArray.forEach((child) => {
+        if(child.children){
+            const decendantsArray = Array.from(child.children)
+            
+            const decendantInput = decendantsArray.find(
+                (child) => {
+                    return child.nodeName === 'INPUT'
+                }
+            )
+            console.log(decendantInput)
+        }
+        return;
+    })
+
 form.addEventListener('submit', (event) => {
     //console.log(childrenArray)
     if(!email.validity.valid){

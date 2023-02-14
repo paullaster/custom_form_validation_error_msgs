@@ -23,19 +23,19 @@ form.addEventListener("submit", event => {
   }
 
   const childrenArray = Array.from(form.childNodes);
-childrenArray.forEach(child => {
-  if (child.children) {
-    const decendantsArray = Array.from(child.children);
+  childrenArray.forEach(child => {
+    if (child.children) {
+      const decendantsArray = Array.from(child.children);
 
-    const decendantInput = decendantsArray.find(child => {
-      return child.nodeName === "INPUT";
-    });
-    decendantInput.addEventListener('invalid', (event) => {
+      const decendantInput = decendantsArray.find(child => {
+        return child.nodeName === "INPUT";
+      });
+      decendantInput.addEventListener("invalid", event => {
         console.log(event);
-    })
-  }
-  return;
-});
+      });
+    }
+    return;
+  });
 });
 
 const showError = () => {

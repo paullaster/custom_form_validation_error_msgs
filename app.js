@@ -24,7 +24,7 @@ childrenArray.forEach(child => {
       return child.nodeName === "INPUT";
     });
     decendantInput.addEventListener('invalid', (event) => {
-        console.log(decendantInput);
+        console.log(event);
     })
   }
   return;

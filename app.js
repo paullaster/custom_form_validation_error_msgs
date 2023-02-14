@@ -4,7 +4,7 @@ const emailError = document.querySelector('#mail + span.error');
 
 const showError = () => {
     if(emailError.validity.valueMissing){
-        
+        emailError.innerHTML = "Email is missing!"
     }
 }
 

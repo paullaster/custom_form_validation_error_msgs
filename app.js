@@ -3,7 +3,7 @@ const email = document.getElementById('mail');
 const emailError = document.querySelector('#mail + span.error');
 
 email.addEventListener('input', (event) => {
-    if(email.validity.typeMismatch){
+    if(email.validity.valid){
         console.log(email.validity)
        return email.setCustomValidity("Expect an email!");
     }

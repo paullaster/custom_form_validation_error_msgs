@@ -5,4 +5,5 @@ email.addEventListener('input', (event) => {
        return email.setCustomValidity("Expect an email!");
     }
     email.setCustomValidity("");
+
 })

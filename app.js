@@ -11,6 +11,7 @@ email.addEventListener('input', (event) => {
        return;
     }
     console.log(email.validity)
-    email.setCustomValidity("");
+    showError();
+    //email.setCustomValidity("");
 
 })

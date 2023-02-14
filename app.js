@@ -17,7 +17,8 @@ email.addEventListener('input', (event) => {
 });
 
 form.addEventListener('submit', (event) => {
-    const childrenArray = Array.from(form.children)
+    const childrenArray = Array.from(form.children.children)
+    console.log(childrenArray)
     if(!email.validity.valid){
         showError();
         event.preventDefault();

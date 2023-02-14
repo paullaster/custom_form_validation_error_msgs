@@ -19,13 +19,12 @@ email.addEventListener('input', (event) => {
 form.addEventListener('submit', (event) => {
     if(!email.validity.valid){
         showError();
+        addEventListener('invalid', (event) => {
+            console.log (event);
+        })
         event.preventDefault();
     }
 })
-
-form.addEventListener('invalid', (event) => {
-    
-});
 
 const showError = () => {
     if(email.validity.valueMissing){
